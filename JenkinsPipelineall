@@ -19,9 +19,9 @@ pipeline{
             steps{
                   nexusArtifactUploader artifacts: [
                        [
-                            artifactId: 'maven-web-application', 
+                            artifactId: 'maven-web-application-mithun', 
                             classifier: '', 
-                            file: "target/maven-web-application-0.0.1-SNAPSHOT.war", 
+                            file: "target/maven-web-application-mithun-0.0.1-SNAPSHOT.war", 
                             type: 'war'
                        ]
                   ], 
