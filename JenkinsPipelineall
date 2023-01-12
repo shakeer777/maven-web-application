@@ -19,19 +19,19 @@ pipeline{
             steps{
                   nexusArtifactUploader artifacts: [
                        [
-                            artifactId: 'myweb', 
+                            artifactId: 'maven-web-application', 
                             classifier: '', 
-                            file: "target/myweb-8.2.0.war", 
+                            file: "target/maven-web-application-0.0.1-SNAPSHOT.war", 
                             type: 'war'
                        ]
                   ], 
                   credentialsId: 'nexus3', 
-                  groupId: 'in.javahome', 
+                  groupId: 'com.mt', 
                   nexusUrl: '172.31.32.172:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
                   repository: 'sample-releases', 
-                  version: '8.2.0'  
+                  version: '0.0.1-SNAPSHOT'  
               }
             }
         stage("deploy-dev"){
