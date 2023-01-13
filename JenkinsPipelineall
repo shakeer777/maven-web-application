@@ -21,7 +21,7 @@ pipeline{
                        [
                             artifactId: 'maven-web-application-mithun', 
                             classifier: '', 
-                            file: "target/maven-web-application-mithun-0.0.1-SNAPSHOT.war", 
+                            file: "target/myweb-0.0.1-SNAPSHOT.war", 
                             type: 'war'
                        ]
                   ], 
@@ -30,7 +30,7 @@ pipeline{
                   nexusUrl: '172.31.32.172:8081', 
                   nexusVersion: 'nexus3', 
                   protocol: 'http', 
-                  repository: 'sample-releases', 
+                  snapshotRepository: 'sample-snapshots', 
                   version: '0.0.1-SNAPSHOT'  
               }
             }
